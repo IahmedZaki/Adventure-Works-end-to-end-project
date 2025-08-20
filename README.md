@@ -1,4 +1,3 @@
-# Adventure-Works-end-to-end-project
 # End-to-End Data Engineering & Business Intelligence Solution  
 
 This repository showcases a complete data solution for **Adventure Works Cycles**, combining **Data Engineering** (ETL pipelines and Data Warehouse design) and **Business Intelligence** (interactive Power BI dashboards).  
