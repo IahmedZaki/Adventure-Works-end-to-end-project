@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AHMEDZAKI_OLAP"
+  DTS:DTSID="{D7B9BA21-7994-4BCF-B04A-CC1562C2D7F9}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=AHMEDZAKI\OLAP;User ID=;Initial Catalog=AdventureWorks-DW;Provider=MSOLEDBSQL.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Data Eng Project (Ejada)-{D7B9BA21-7994-4BCF-B04A-CC1562C2D7F9}AHMEDZAKI\OLAP;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

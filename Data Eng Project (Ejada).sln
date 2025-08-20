@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Data Eng Project (Ejada)", "Data Eng Project (Ejada).dtproj", "{6A3E9F78-693C-2A49-0419-BE889BD80FBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A3E9F78-693C-2A49-0419-BE889BD80FBE}.Development|Default.ActiveCfg = Development
+		{6A3E9F78-693C-2A49-0419-BE889BD80FBE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6FDBCCDD-3658-4077-9582-856BA9146EEE}
+	EndGlobalSection
+EndGlobal
