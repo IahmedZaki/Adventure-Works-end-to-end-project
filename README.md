@@ -4,60 +4,49 @@ This repository showcases a complete data solution for **Adventure Works Cycles*
 
 ---
 
-## 🚀 Project Overview  
-- **Objective**: Deliver a robust analytics platform to enable fast, reliable decision-making.  
-- **Scope**:  
-  - Design and implement a **star-schema Data Warehouse** optimized with **columnstore indexes**.  
-  - Automate **initial and incremental data loads** using **SSIS pipelines** with a staging layer for quality control.  
-  - Apply **Slowly Changing Dimensions (SCD)** to track historical changes.  
-  - Develop **Power BI dashboards** with KPIs, filters, maps, and customer/product insights.  
+## 📌 Project Summary
+
+- **Goal** → Build a reliable data platform from OLTP source to BI reporting.  
+- **Approach** →  
+  - Designed a **star-schema data warehouse** with columnstore indexing for high performance.  
+  - Automated **ETL workflows** using SSIS with both **initial** and **incremental** loads.  
+  - Applied **Slowly Changing Dimensions (SCD)** to preserve historical product data.  
+  - Developed **Power BI dashboards** with KPIs, filters, maps, and deep customer/product insights.  
 
 ---
 
-## 🏗 Data Engineering (ETL & Data Warehouse)  
-### Key Features  
-- **Source System**: OLTP database (AdventureWorks)  
-- **ETL Tool**: SQL Server Integration Services (SSIS)  
-- **Architecture**:  
-  - **Staging layer** to buffer and validate incoming data  
-  - **Star-schema DW** using **columnstore indexes** for high performance  
-  - **Dynamic pipelines** handling:  
-    - **Initial Load** (full data reset)  
-    - **Incremental Load** (delta data using watermark variables)  
-- **Data Handling**:  
-  - **Orders** → Append-only  
-  - **Customer data** → Overwrite (no historical tracking)  
-  - **Product cost/price** → Historical tracking using SCD logic  
+## 🏗 Data Engineering
 
-### Deliverables  
-- SSIS project (`AdventureWorks_OLAP`) with one unified package  
-- Data Warehouse backup file  
-- Implementation presentation showing pipelines, transformations, and performance validation  
+### Architecture & Process
+- **Source** → AdventureWorks OLTP database  
+- **Staging Layer** → Ensures data quality and reduces source load  
+- **Data Warehouse** → Star schema with optimized columnstore indexes  
+- **ETL Automation** → SSIS package with dynamic variables and control flow  
+  - **Initial Load** → Full reset and population  
+  - **Incremental Load** → Delta extraction using watermark timestamps  
+- **Data Logic** →  
+  - Orders → Append-only  
+  - Customers → Overwrite (no history)  
+  - Products → Track price/cost changes using SCD  
 
----
+## 📊 Business Intelligence
 
-## 📊 Business Intelligence (Analytics & Reporting)  
-### Key Features  
-- **Tool**: Microsoft Power BI  
-- **Data Model**: Based on the star-schema DW built in the ETL phase  
-- **Dashboard Highlights**:  
-  - **KPIs**: Orders, products, customers, active customer ratio, avg. shipping time  
-  - **Filters & Slicers**: Date and location filters with map visuals  
-  - **Customer Insights**: Active customers by location, shipping patterns  
-  - **Product Insights**: Quantities by category, top-performing models  
-- **Outcome**: Clear, structured reporting to support business decisions  
+### Dashboard Highlights
+- **Tool** → Microsoft Power BI  
+- **Data Model** → Built on the DW created in the ETL phase  
+- **Features** →  
+  - Core KPIs (orders, products, customers, active customer ratio, shipping time)  
+  - Date & location filters with interactive map visuals  
+  - Customer insights (active customers by region, shipping patterns)  
+  - Product insights (quantities by category, top models)  
+- **Outcome** → Data is presented in a structured, visual format for faster decisions  
 
-### Deliverables  
-- Power BI `.pbix` report file with interactive pages  
-- Updated project presentation including visuals and workflows  
 
----
+## 🛠 Tech Stack
 
-## 🛠 Tools & Technologies  
-- **Database**: Microsoft SQL Server  
-- **ETL**: SSIS (SQL Server Integration Services)  
-- **Modeling**: Star Schema, Columnstore Indexing  
-- **Reporting**: Microsoft Power BI  
-- **Languages**: SQL, DAX, M  
-
+- **Database** → Microsoft SQL Server  
+- **ETL** → SQL Server Integration Services (SSIS)  
+- **Data Modeling** → Star Schema, Columnstore Indexes, SCD  
+- **Analytics & Reporting** → Microsoft Power BI  
+- **Languages** → SQL, DAX, M  
 
