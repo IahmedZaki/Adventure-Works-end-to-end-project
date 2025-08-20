@@ -49,7 +49,7 @@ This repository showcases a complete data solution for **Adventure Works Cycles*
 - **Data Modeling** → Star Schema, Columnstore Indexes, SCD  
 - **Analytics & Reporting** → Microsoft Power BI  
 - **Languages** → SQL, DAX, M  
-
+---
 ### 🔹 SSIS Setup  
 
 - Open the SSIS project in **Visual Studio (SQL Server Data Tools)**.  
