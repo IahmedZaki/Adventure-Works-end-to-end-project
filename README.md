@@ -50,3 +50,31 @@ This repository showcases a complete data solution for **Adventure Works Cycles*
 - **Analytics & Reporting** → Microsoft Power BI  
 - **Languages** → SQL, DAX, M  
 
+### 🔹 SSIS Setup  
+
+- Open the SSIS project in **Visual Studio (SQL Server Data Tools)**.  
+- Update the **connection manager** with your SQL Server instance.  
+- Configure project parameters:  
+  - `InitialLoad = True` → for the first bulk load.  
+  - `InitialLoad = False` → for incremental loads.  
+- Deploy the package to **SSIS Catalog** or run locally.  
+
+---
+
+### 🔹 Initial Load  
+- Open ssms restore only v1 of db
+- Set project parameter `InitialLoad = True`.  
+- The pipeline will:  
+  - **Truncate** all DW tables.  
+  - **Bulk load** dimensions and facts from the source OLTP.  
+  - **Rebuild constraints and indexes** after loading.  
+- After completion, reset `InitialLoad = False` to switch to incremental mode.  
+
+---
+
+### 🔹 Incremental Load  
+- Open ssms Delete the v1 of database and restore the full db v1+v1
+- Ensure a `Watermark` table exists in the **DW**.  
+- Each run fetches only new/updated data since the last `LastJobTime`.  
+- After the run, the `LastJobTime` is updated automatically.  
+
